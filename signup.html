@@ -12,8 +12,11 @@
     <div class="form-login mt-5 m-auto shadow-lg rounded-3 p-5 text-center">
         <h1 class="text-info mb-4">Smart Login System</h1>
         <input type="text" placeholder="Enter your name" id="txt" class="form-control mb-3">
+        <p class="text-danger d-none" id="name-valid">It must contain a binary name</p>
         <input type="email" placeholder="Enter your email" id="mail" class="form-control mb-3">
+        <p class="text-danger d-none" id="mail-valid">example@gmail.com</p>
         <input type="password" placeholder="Enter password" id="pass" class="form-control mb-5">
+        <p class="text-danger d-none" id="pass-valid">It must contain(A lowercase letter, A uppercase letter, A number, Minimum 8 characters)</p>
         <p class="text-danger" id="warn"></p>
         <button class="btn btn-outline-info w-100 mb-2" id="sign" onclick="signup()">sign Up</button>
         <p class="text-white"><span>You have an account? </span><a href="index.html">Sign in</a></p>

@@ -3,6 +3,8 @@ var logMail = document.getElementById('logMail');
 var logPass = document.getElementById('logPass');
 var logWarn = document.getElementById('logWarn');
 var identi = document.getElementById('identi');
+var logMailRule = document.getElementById('logMail-valid')
+var logPassRule = document.getElementById('logPass-valid')
 
 var userData;
 
@@ -59,10 +61,12 @@ function logMailValidation(){
     if(mailRegx.test(mailfUser)){
         logMail.classList.add("is-valid");
         logMail.classList.remove("is-invalid");
+        logMailRule.classList.replace('d-block', 'd-none')
         return true;
     }else{
         logMail.classList.add("is-invalid");
         logMail.classList.remove("is-valid");
+        logMailRule.classList.replace('d-none', 'd-block')
         return false
     }
 }
@@ -73,10 +77,12 @@ function logPassValidation(){
     if (passRegex.test(passfUser)){
         logPass.classList.add("is-valid");
         logPass.classList.remove("is-invalid");
+        logPassRule.classList.replace('d-block', 'd-none')
         return true;
     }else{
         logPass.classList.add("is-invalid");
         logPass.classList.remove("is-valid");
+        logPassRule.classList.replace('d-none', 'd-block')
         return false
     }
 }

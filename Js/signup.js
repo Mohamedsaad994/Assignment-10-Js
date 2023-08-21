@@ -3,6 +3,10 @@ var txt = document.getElementById('txt');
 var pass = document.getElementById('pass');
 var sign = document.getElementById('sign');
 var warn = document.getElementById('warn');
+var nameRule = document.getElementById('name-valid');
+var mailRule = document.getElementById('mail-valid');
+var passRule = document.getElementById('pass-valid')
+
 
 
 var userData;
@@ -72,10 +76,12 @@ function mailValidation(){
     if(mailRegx.test(mailfUser)){
         mail.classList.add("is-valid");
         mail.classList.remove("is-invalid");
+        mailRule.classList.replace('d-block','d-none')
         return true;
     }else{
         mail.classList.add("is-invalid");
         mail.classList.remove("is-valid");
+        mailRule.classList.replace('d-none','d-block')
         return false
     }
 }
@@ -85,10 +91,12 @@ function nameValidation(){
     if(nameRegex.test(namefUser)){
         txt.classList.add("is-valid");
         txt.classList.remove("is-invalid");
+        nameRule.classList.replace('d-block','d-none')
         return true;
     }else{
         txt.classList.add("is-invalid");
         txt.classList.remove("is-valid");
+        nameRule.classList.replace('d-none','d-block')
         return false;
     }
 }
@@ -98,10 +106,12 @@ function passValidation(){
     if (passRegex.test(passfUser)){
         pass.classList.add("is-valid");
         pass.classList.remove("is-invalid");
+        passRule.classList.replace('d-block','d-none')
         return true;
     }else{
         pass.classList.add("is-invalid");
         pass.classList.remove("is-valid");
+        passRule.classList.replace('d-none','d-block')
         return false
     }
 }
