@@ -1,0 +1,30 @@
+body{
+    background-color: #24353f;
+}
+.form-login{
+    background-color: #24353f;
+    width:65%
+}
+.form-login input{
+    background-color: #24353f;
+    color:#fff
+}
+.form-login input:focus{
+    background-color: #24353f;
+    color:#fff
+}
+.form-login input::placeholder{
+    color:#ccc
+}
+.form-login p a{
+    color:#fff;
+    text-decoration: none;
+    transition:0.4s
+}
+.form-login p a:hover{
+    color:#0dcaf0;
+    text-decoration: underline;
+}
+.form-login button:hover{
+    color:#fff
+}
