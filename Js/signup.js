@@ -29,7 +29,7 @@ function signup(){
         userData.push(fromUser);
         localStorage.setItem('DatafUser',JSON.stringify(userData));
         reset();
-        window.location.replace("signin.html")
+        window.location.replace("index.html")
         return;
     } else if(mail.value === '' || pass.value === '' || txt.value === ''){
         warn.innerHTML='All inputs is required'
